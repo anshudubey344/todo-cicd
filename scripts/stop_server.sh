@@ -1,3 +1,3 @@
 #!/bin/bash
-pkill node || true
+#pkill node || true
 
