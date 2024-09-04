@@ -5,17 +5,15 @@ files:
     destination: /home/ubuntu/todo-cicd
 hooks:
   BeforeInstall:
-    - location: scripts/stop_server.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: ubuntu
-
   AfterInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/after_install.sh
       timeout: 300
       runas: ubuntu
-
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/application_start.sh
       timeout: 300
       runas: ubuntu
 
